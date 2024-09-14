@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+  <title>Home</title>
+  <link rel="stylesheet" type="text/css" href="{% static 'css/Request.css' %}" >
+</head>
+<header>
+  <img src="{% static 'svg/socio.svg' %}">
+</header>
+<body>
+  <h1> Connect here 🤝</h1>
+  <div class="homebut"><a href="{% url 'home' %}">Back to home</a><br><br></div>
+  <!-- <input type="text" id="demo" placeholder="search here" onclick="ddactive();"> -->
+  <div class="sea">
+        
+  </div>  
+  <div class="userlist">
+    {% for x in d %}
+    <a href="{% url 'pro1' x.u_id %}">{{x.u_name}}</a>
+    
+  {% endfor %}
+
+  </div> 
+
+
+</body>
+</html>
+
